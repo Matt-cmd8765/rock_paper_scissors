@@ -4,7 +4,7 @@ function playRound(player, computer) {
  
     if (player === "rock" && computer === "scissors") {
         const win1 = document.getElementById('overallResult');
-        win1.textContent = "You win! Rock crushes scissors!";
+        win1.textContent = "You win the round! Rock crushes scissors!";
 
         let playerwin = "playerwin";
         return playerwin;
@@ -18,21 +18,21 @@ function playRound(player, computer) {
     }
     else if (player === "rock" && computer === "paper") {
         const win3 = document.getElementById('overallResult');
-        win3.textContent = "You lose! Paper covers rock.";
+        win3.textContent = "You lose the round! Paper covers rock.";
 
         let computerwin = "computerwin";        
         return computerwin;
     }
     else if (player === "paper" && computer === "scissors") {
         const win4 = document.getElementById('overallResult');
-        win4.textContent = "You lose! Scissors cuts paper.";
+        win4.textContent = "You lose the round! Scissors cuts paper.";
 
         let computerwin = "computerwin";
         return computerwin;
     }
     else if (player === "paper" && computer === "rock") {
         const win5 = document.getElementById('overallResult');
-        win5.textContent = "You win! Paper covers rock.";
+        win5.textContent = "You win the round! Paper covers rock.";
         
         let playerwin = "playerwin"
         return playerwin;
@@ -53,14 +53,14 @@ function playRound(player, computer) {
     }
     else if (player === "scissors" && computer === "rock") {
         const win8 = document.getElementById('overallResult');
-        win8.textContent = "You lose! rock crushes scissors.";
+        win8.textContent = "You lose the round! rock crushes scissors.";
 
         let computerwin = 'computerwin';
         return computerwin;
     }
     else if (player === "scissors" && computer === "paper") {
         const win9 = document.getElementById('overallResult');
-        win9.textContent = "You win! Scissors cuts paper!";
+        win9.textContent = "You win the round! Scissors cuts paper!";
         
         let playerwin = "playerwin";
         return playerwin;
@@ -123,18 +123,27 @@ function game () {
                 tie++;
                 totalgames++;
             }
-            console.log("The player has won " + playerwin + " times");
-            console.log("The computer has won " + computerwin + " times");
-            console.log("There were " + tie + " ties");
+
+            const playerScore = document.getElementById("playerScore");
+            playerScore.textContent = "The player has won " + playerwin + " rounds";
+
+            const computerScore = document.getElementById("computerScore");
+            computerScore.textContent = "The computer has won " + computerwin + " rounds";
+
+            const tieScore = document.getElementById("tieScore");
+            tieScore.textContent = "There were " + tie + " ties";
 
         if (totalgames === 5 && playerwin > computerwin) {
-            console.log("Player wins!");
+            const playerWinGame = document.getElementById("gameResult");
+            playerWinGame.textContent = "Player wins the game!";
         }
         else if (totalgames === 5 && computerwin > playerwin) {
-            console.log("Computer wins!");
+            const computerWinGame = document.getElementById("gameResult");
+            computerWinGame.textContent = "The computer wins the game!";
         }
-        else if (totalgames ===5 && computerwin === playerwin) {
-            console.log("Tie, no one wins. How boring...");
+        else if (totalgames === 5 && computerwin === playerwin) {
+            const tieGame = document.getElementById("gameResult");
+            tieGame.textContent = "Tie, no one wins. How boring...";
         }
         })
     })

@@ -47,7 +47,7 @@ button:hover {
     background-color: #33bb67;
 }
 
-#result {
+#result, #score {
     display: flex;
     font-family: 'Kalam';
     flex-direction: column;
@@ -55,4 +55,14 @@ button:hover {
     font-size: 18px;
     color: antiquewhite;
     align-items: center;
+}
+
+#overallScore {
+    color: antiquewhite;
+    justify-content: center;
+}
+
+#gameResult {
+    font-size: x-large;
+    font-weight: 800;
 }
