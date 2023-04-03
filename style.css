@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #6d4554, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+h1 {
+    text-align: center;
+    font-family: 'Kalam';
+    font-size: 48px;
+    color: antiquewhite;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: transparent;
+    color: antiquewhite;
+    font-weight: bold;
+    border: 2px solid antiquewhite;
+    border-radius: 8px;
+    padding: 30px 30px;
+    margin: 4px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #33bb67;
+}
