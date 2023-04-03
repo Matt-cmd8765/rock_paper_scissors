@@ -35,6 +35,8 @@ button {
     background-color: transparent;
     color: antiquewhite;
     font-weight: bold;
+    font-family: 'Kalam';
+    font-size: 20px;
     border: 2px solid antiquewhite;
     border-radius: 8px;
     padding: 30px 30px;
